@@ -24,4 +24,4 @@
 
 ## Credit and Collaborations
 
-Classmates: Patrick Laurion, Sarah Creager
+Classmates: Patrick Laurion, Sarah Creager, Antoine Charette
