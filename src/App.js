@@ -26,6 +26,7 @@ class App extends Component {
       this.setState({lat: response.data[0].lat});
       this.setState({lon: response.data[0].lon});
       this.setState({name: response.data[0].display_name});
+      this.setState({image: `https://maps.locationiq.com/v3/staticmap?key=${cityKey}&center=${this.state.lat},${this.state.lon}&zoom=12`});
     } catch(err) {
       console.log(err.message);
     }
@@ -42,6 +43,7 @@ class App extends Component {
             <Accordion.Body>
               <h3>Latitude: {this.state.lat}</h3>
               <h3>Longitude: {this.state.lon}</h3>
+              <img src={this.state.image} alt={this.state.name} />
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

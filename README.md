@@ -24,3 +24,4 @@
 
 ## Credit and Collaborations
 
+Classmates: Patrick Laurion, Sarah Creager
