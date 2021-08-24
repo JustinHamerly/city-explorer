@@ -13,9 +13,6 @@ class App extends Component {
     this.state = {
       searchQuery: '',
       location: {},
-      lat: '',
-      lon: '',
-      name: '',
       error: '',
     }
   }
@@ -23,13 +20,9 @@ class App extends Component {
     const API = `https://us1.locationiq.com/v1/search.php?key=${cityKey}&q=${this.state.searchQuery}&format=json`;
     try{
       const response = await axios.get(API);
-      // console.log(response.data);
       this.setState({location: response.data[0]});
-      this.setState({lat: response.data[0].lat});
-      this.setState({lon: response.data[0].lon});
-      this.setState({name: response.data[0].display_name});
-      this.setState({image: `https://maps.locationiq.com/v3/staticmap?key=${cityKey}&center=${this.state.lat},${this.state.lon}&zoom=12`});
-    } catch(err) {
+      this.setState({image: `https://maps.locationiq.com/v3/staticmap?key=${cityKey}&center=${this.state.location.lat},${this.state.location.lon}&zoom=12`});
+    } catch (err) {
       this.setState({error: `${err}`});
     }
   }
@@ -44,14 +37,14 @@ class App extends Component {
             {this.state.error}: Not a valid location
           </Alert>
         
-        : this.state.name &&
+        : this.state.image &&
           <Accordion defaultActiveKey="0">
             <Accordion.Item eventKey="0">
               <Accordion.Header><h2>Location: {this.state.location.display_name}</h2></Accordion.Header>
               <Accordion.Body>
-                <h3>Latitude: {this.state.lat}</h3>
-                <h3>Longitude: {this.state.lon}</h3>
-                <img src={this.state.image} alt={this.state.name} />
+                <h3>Latitude: {this.state.location.lat}</h3>
+                <h3>Longitude: {this.state.location.lon}</h3>
+                <img src={this.state.image} alt={this.state.location.display_name} />
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
