@@ -20,8 +20,25 @@
 ## Change Log
 
 > *Version 1.0.0*
-> - Features:
+>
+>- Features:
+>- location input
+>- map, name and coordinates
+>- error response
 
 ## Credit and Collaborations
 
 Classmates: Patrick Laurion, Sarah Creager, Antoine Charette
+
+## Time Estimates
+
+>Name of feature: API hookup, map generation, error response
+>
+>Estimate of time needed to complete: 4 hours
+>
+>Start time: 3:30pm
+>
+>Finish time: 7:23pm
+>
+>Actual time needed to complete: 3 hours, 53 min
+
