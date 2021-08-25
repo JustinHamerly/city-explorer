@@ -42,3 +42,13 @@ Classmates: Patrick Laurion, Sarah Creager, Antoine Charette
 >
 >Actual time needed to complete: 3 hours, 53 min
 
+>Name of feature: 
+>
+>Estimate of time needed to complete: 3.5 hours
+>
+>Start time: 2:30 pm
+>
+>Finish time: 
+>
+>Actual time needed to complete: 
+
