@@ -1,7 +1,7 @@
 # City Explorer
 
-**Author**: Justin Hamerly
-**Version**: 1.0.0
+>**Author**: Justin Hamerly
+>**Version**: 1.0.0
 
 ## Overview
 
@@ -42,13 +42,16 @@ Classmates: Patrick Laurion, Sarah Creager, Antoine Charette
 >
 >Actual time needed to complete: 3 hours, 53 min
 
->Name of feature: 
+>Name of feature: Connecting Server to front end and render weather data from the weather data file.
 >
 >Estimate of time needed to complete: 3.5 hours
 >
 >Start time: 2:30 pm
 >
->Finish time: 
+>Finish time: 9 PM
 >
->Actual time needed to complete: 
+>Actual time needed to complete: 6.5 Hours
 
+![WRRC lab 06](./img/Lab06WRRC.PNG)
+![WRRC lab 07](./img/lab07WRRC.png)
+![WRRC lab 08](./img/lab08WRRC.png)

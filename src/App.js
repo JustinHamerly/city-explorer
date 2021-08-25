@@ -26,6 +26,7 @@ class App extends Component {
       const response = await axios.get(API);
       this.setState({location: response.data[0]});
       this.setState({image: `https://maps.locationiq.com/v3/staticmap?key=${cityKey}&center=${this.state.location.lat},${this.state.location.lon}&zoom=12`});
+      this.setState({weather: undefined});
       this.getWeather(this.state.searchQuery);
     } catch (err) {
       this.setState({error: `${err}`});
