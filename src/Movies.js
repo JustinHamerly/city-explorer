@@ -15,7 +15,7 @@ class Movies extends Component {
       <>
         {movieArray.map((movie, idx) => {
           return(
-            <Accordion defaultActiveKey={idx}>
+            <Accordion key={idx}>
             <Accordion.Item eventKey={movie.title}>
               <Accordion.Header><h2>Movie: {idx+1}</h2></Accordion.Header>
               <Accordion.Body>

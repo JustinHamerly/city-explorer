@@ -19,6 +19,7 @@ class App extends Component {
       location: {},
       lat: 0,
       lon: 0,
+      image: '',
       error: '',
       weather: undefined,
       movies: undefined,
@@ -33,12 +34,13 @@ class App extends Component {
         location: response.data[0],
         lat: parseFloat(response.data[0].lat),
         lon: parseFloat(response.data[0].lon),
-        image: `https://maps.locationiq.com/v3/staticmap?key=${cityKey}&center=${this.state.lat},${this.state.lon}&zoom=13`,
+        image: undefined,
         weather: undefined,
         movies: undefined,
       });
       this.getWeather(this.state.searchQuery, this.state.lat, this.state.lon);
       this.getMovies(this.state.searchQuery);
+      this.setState({image: `https://maps.locationiq.com/v3/staticmap?key=${cityKey}&center=${this.state.lat},${this.state.lon}&zoom=13`})
     } catch (err) {
       this.setState({error: `${err}`});
     }

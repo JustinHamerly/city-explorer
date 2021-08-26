@@ -15,7 +15,7 @@ class Weather extends Component {
       <>
         {weatherArray.map((day, idx) => {
           return(
-            <Accordion defaultActiveKey={idx}>
+            <Accordion key={idx}>
             <Accordion.Item eventKey={day.date}>
               <Accordion.Header><h2>Weather: Day {idx+1}</h2></Accordion.Header>
               <Accordion.Body>
