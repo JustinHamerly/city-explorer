@@ -15,6 +15,8 @@ class App extends Component {
     this.state = {
       searchQuery: '',
       location: {},
+      lat: 0,
+      lon: 0,
       error: '',
       weather: undefined,
     }
@@ -25,17 +27,19 @@ class App extends Component {
     try{
       const response = await axios.get(API);
       this.setState({location: response.data[0]});
-      this.setState({image: `https://maps.locationiq.com/v3/staticmap?key=${cityKey}&center=${this.state.location.lat},${this.state.location.lon}&zoom=12`});
+      this.setState({lat: parseFloat(response.data[0].lat)})
+      this.setState({lon: parseFloat(response.data[0].lon)})
+      this.setState({image: `https://maps.locationiq.com/v3/staticmap?key=${cityKey}&center=${this.state.lat},${this.state.lon}&zoom=13`});
       this.setState({weather: undefined});
-      this.getWeather(this.state.searchQuery);
+      this.getWeather(this.state.searchQuery, this.state.lat, this.state.lon);
     } catch (err) {
       this.setState({error: `${err}`});
     }
   }
 
-  getWeather = async (searchQuery) => {
+  getWeather = async (searchQuery, lat, lon) => {
     try{
-      const response = await axios.get(`http://localhost:3001/weather?searchQuery=${searchQuery}`);
+      const response = await axios.get(`http://localhost:3001/weather?searchQuery=${searchQuery}&lat=${lat}&lon=${lon}`);
       this.setState({weather: response.data});
     } catch (error) {
       console.log(error);
