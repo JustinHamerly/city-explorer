@@ -72,29 +72,31 @@ class App extends Component {
         <input onChange={(e) => this.setState({searchQuery: e.target.value})} value={this.state.searchQuery} placeholder="search for a city"></input>
         <button onClick={this.getLocation}>Explore!</button>
         {this.state.error ?
-
           <Alert>
             {this.state.error}: Not a valid location
           </Alert>
-
           : this.state.image &&
           <>
-            <Accordion defaultActiveKey="0">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header><h2>Location: {this.state.location.display_name}</h2></Accordion.Header>
-                <Accordion.Body>
-                  <h3>Latitude: {this.state.location.lat}</h3>
-                  <h3>Longitude: {this.state.location.lon}</h3>
-                  <img src={this.state.image} alt={this.state.location.display_name} />
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-            {this.state.weather &&
-              <Weather weatherData={this.state.weather} />
-            } 
-            {this.state.movies &&
-              <Movies movieData={this.state.movies} />
-            }
+            <div id='mapweather'>
+              <Accordion defaultActiveKey="0">
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header><h2>Location: {this.state.location.display_name}</h2></Accordion.Header>
+                  <Accordion.Body>
+                    <h3>Latitude: {this.state.location.lat}</h3>
+                    <h3>Longitude: {this.state.location.lon}</h3>
+                    <img src={this.state.image} alt={this.state.location.display_name} />
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+              {this.state.weather &&
+                <Weather weatherData={this.state.weather} />
+              } 
+            </div>
+            <div id="movielist">
+              {this.state.movies &&
+                <Movies movieData={this.state.movies} />
+              }
+            </div>
           </>
         }
       </>
