@@ -1,7 +1,7 @@
 # City Explorer
 
 >**Author**: Justin Hamerly
->**Version**: 2.0.0
+>**Version**: 3.0.0
 
 ## Overview
 
@@ -15,7 +15,7 @@
 
 - Languages: Javascript, HTML
 - Libraries: React
-- Technologies: NodeJS
+- Technologies: NodeJS, Heroku, Netlify
 
 ## Change Log
 
@@ -29,6 +29,10 @@
 >*Version 2.0.0*
 >
 >- Adding in the 5 day forecast for the city, as well as movies related to the city query
+
+>*Version 3.0.0*
+>
+>- code refactoring
 
 ## Credit and Collaborations
 
@@ -60,11 +64,21 @@ Classmates: Patrick Laurion, Sarah Creager, Antoine Charette
 >
 >Estimate of time needed to complete: 6 hours
 >
->Start time: 2:00 pm/
+>Start time: 2:00 pm/1:00 pm
 >
->Finish time: 6:30 PM/
+>Finish time: 6:30 PM/3:00 PM
 >
->Actual time needed to complete: 4 hours 30 minutes/
+>Actual time needed to complete: 4 hours 30 minutes/2 hours
+
+>Name of feature: Refactoring code
+>
+>Estimate of time needed to complete: 2 1/2 hours
+>
+>Start time: 3:00 PM
+>
+>Finish time: 5:00PM
+>
+>Actual time needed to complete: 2 Hours
 
 ![WRRC lab 06](./img/Lab06WRRC.PNG)
 ![WRRC lab 07](./img/lab07WRRC.png)

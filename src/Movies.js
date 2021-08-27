@@ -17,14 +17,17 @@ class Movies extends Component {
           return(
             <Accordion key={idx}>
             <Accordion.Item eventKey={movie.title}>
-              <Accordion.Header><h2>Movie: {idx+1}</h2></Accordion.Header>
+              <Accordion.Header>{movie.title}</Accordion.Header>
               <Accordion.Body>
-                <h3>Title: {movie.title}</h3>
-                <h4>Description: {movie.description}</h4>
-                <h4>Average Vote: {movie.avgVote}</h4>
-                <h4>Total Votes: {movie.totalVote}</h4>
-                <h4>Popularity: {movie.popularity}</h4>
-                <h4>Release Date: {movie.release_date}</h4>
+                <p>{movie.description}</p>
+                <h3>Release Date: {movie.release}</h3>
+                <div class='votes'>
+                  <h4>Average Vote: {movie.avgVote}</h4>
+                  <h4>Total Votes: {movie.totalVote}</h4>
+                  <h4>Popularity: {movie.popularity}</h4>
+                </div>
+
+              
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>

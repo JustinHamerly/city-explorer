@@ -17,12 +17,11 @@ class Weather extends Component {
           return(
             <Accordion key={idx}>
             <Accordion.Item eventKey={day.date}>
-              <Accordion.Header><h2>Weather: Day {idx+1}</h2></Accordion.Header>
+              <Accordion.Header>{day.date}</Accordion.Header>
               <Accordion.Body>
-                <h3>Date: {day.date}</h3>
-                <h3>Description: {day.description}</h3>
-                <h3>Minimum Temp: {day.minTemp}</h3>
-                <h3>Maximum Temp: {day.maxTemp}</h3>
+                <h3>{day.description}</h3>
+                <h4>Min Temp: {day.minTemp}</h4>
+                <h4>Max Temp: {day.maxTemp}</h4>
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
