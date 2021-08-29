@@ -9,7 +9,9 @@ import Movies from './Movies'
 
 
 let cityKey = process.env.REACT_APP_CITY_KEY;
-let server = process.env.REACT_APP_SERVER || 'https://localhost:3001';
+let server = 'http://localhost:3001';
+// process.env.REACT_APP_SERVER || 
+
 
 class App extends Component {
   constructor(props){
@@ -88,6 +90,7 @@ class App extends Component {
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
+              {(new Date(Date.now())).toDateString()}
               {this.state.weather &&
                 <Weather weatherData={this.state.weather} />
               } 
