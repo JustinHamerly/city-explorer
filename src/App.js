@@ -9,8 +9,8 @@ import Movies from './Movies'
 
 
 let cityKey = process.env.REACT_APP_CITY_KEY;
-let server = 'http://localhost:3001';
-// process.env.REACT_APP_SERVER || 
+let server = process.env.REACT_APP_SERVER || 'http://localhost:3001';
+
 
 
 class App extends Component {
