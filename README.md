@@ -1,7 +1,7 @@
 # City Explorer
 
 >**Author**: Justin Hamerly
->**Version**: 3.0.0
+>**Version**: 4.0.0
 
 ## Overview
 
@@ -33,6 +33,10 @@
 >*Version 3.0.0*
 >
 >- code refactoring
+
+>*Version 4.0.0*
+>
+>- adding caching features to the backend
 
 ## Credit and Collaborations
 
@@ -80,7 +84,18 @@ Classmates: Patrick Laurion, Sarah Creager, Antoine Charette
 >
 >Actual time needed to complete: 2 Hours
 
+>Name of feature: Caching
+>
+>Estimate of time needed to complete: 4 hours
+>
+>Start time: 4:30pm
+>
+>Finish time: 9:45PM
+>
+>Actual time needed to complete: 4 hours, 15 minutes
+
 ![WRRC lab 06](./img/Lab06WRRC.PNG)
 ![WRRC lab 07](./img/lab07WRRC.png)
 ![WRRC lab 08](./img/lab08WRRC.png)
 ![WRRC lab 09](./img/lab09WRRC.png)
+![WRRC lab 10](./img/lab10WRRC.png)
